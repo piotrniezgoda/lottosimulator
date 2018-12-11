@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Lotto simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+  <meta name="description" content="lotto simulator, choose your lucky numbers and check if you win">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="appWrapper">
+  <div class="inputDataWrapper">
+    <p class="infoText">wpisz swoje szczęśliwe liczby i sprawdź czy wygrałeś, lub wylosuj swoje liczby:</p>
+    <form action="#">
+      <div class="inputNumberWrapper">
+      <input min="1" max="49" required class="inputNumber" type="number" data-id="numberInput">
+      <input min="1" max="49" required class="inputNumber" type="number" data-id="numberInput">
+      <input min="1" max="49" required class="inputNumber" type="number" data-id="numberInput">
+      <input min="1" max="49" required class="inputNumber" type="number" data-id="numberInput">
+      <input min="1" max="49" required class="inputNumber" type="number" data-id="numberInput">
+      <input min="1" max="49" required class="inputNumber" type="number" data-id="numberInput">
+      <span class="help-text"></span>
+    </div>
+     <div class="buttonWrapper">
+       
+       <button type="submit" id="js-randomizeBtn" class="btn">Losuj</button>
+     </div>
+   </form>   
+   <div id="js-outputDataWrapper" class="outputDataWrapper">
+     <p class="infoText">Wylosowane liczby to:</p>
+     <ol id="numbersResultList" class="randomNumbersList"></ol>
+     <p class="infoText infoText--output">trafione liczby:</p>
+     <span class="fitNumbers" id="luckyNumbers"></span>
+     <p class="infoText infoText--output">liczba losowań:  <span id="js-randomCounter">0</span></p>
+     <button tpye="reset" id="js-resetBtn" class="btn btn--reset">Wyczyść</button>
+   </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Lato', sans-serif;
+}
+.appWrapper {
+  background: #4e4e4e;
+  min-height: 100vh;
+  padding: 40px 0 0;
+}
+.inputDataWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 auto;
+}
+.inputNumberWrapper {
+  display: flex;
+  position: relative;
+}
+.inputNumber {
+  width: 40px;
+  margin: 0 2px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+.inputNumber:invalid {
+  color: red;
+  border-color: red;
+}
+.inputNumber:valid {
+  color: #bada55;
+  border-color: #bada55;
+}
+.inputNumber:out-of-range ~ .help-text::before {
+  content: 'wprowadź liczbę od 1 do 49';
+}
+.help-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -22px;
+  width: 100%;
+  color: red;
+  text-align: center;
+}
+.buttonWrapper {
+  margin: 30px 0;
+  text-align: center;
+}
+.btn {
+  padding: 5px 15px;
+  background: transparent;
+  color: #bada55;
+  border: 2px solid #bada55;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  background: #bada55;
+}
+.btn--reset {
+  color: #ff8080;
+  border-color: #ff8080;
+  display: block;
+  margin: 40px auto 0 auto;
+  font-size: 0.75rem;
+  border: none;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn--reset:hover, .btn--reset:focus {
+  color: #fff;
+  background: #ff8080;
+  border-color: #ff8080;
+}
+.infoText {
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+.infoText--output {
+  margin: 50px 0 15px 0;
+}
+.outputDataWrapper {
+  border: 1px solid #fff;
+  width: 100%;
+  height: 25rem;
+  text-align: center;
+  padding: 25px 0 5px 0;
+  margin: 50px 0 0 0;
+  position: relative;
+}
+.outputDataWrapper--hidden {
+  visibility: hidden;
+}
+.outputDataWrapper--visible {
+  visibility: visible;
+}
+.randomNumbersList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-y: scroll;
+  height: 6rem;
+  position: relative;
+  bottom: 0;
+}
+.randomNumbersList__number {
+  color: #fff;
+  padding: 4px 0;
+  border-bottom: 1px solid #fff;
+}
+.randomNumbersList__number:last-child {
+  color: #000;
+  background: #bada55;
+  border-bottom: none;
+}
+.fitNumbers {
+  color: #bada55;
+  font-weight: 700;
+}
